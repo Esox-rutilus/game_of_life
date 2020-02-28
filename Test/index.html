@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/style/style.css">
+    <link rel="stylesheet" href="../game_of_life/game_of_life.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h1>Game Of Life!</h1>
+        </div>
+        <div id="gameContainer" class="gameContainer"></div>
+        <div class="gameSettings">
+            <h2>Rules</h2>
+            <div class="setting">
+                <label for="minNeighbours">minimum neighbours to survive</label>
+                <input type="number" class="inputValue" name="minPopulationValue" id="minPopulationValue" min="1" max="8" value="2">
+                <input type="range" name="minNeighbours" id="minPopulation" min="1" max="8" value="2">
+            </div>
+            <div class="setting">
+                <label for="maxNeighbours">maximum neighbours to survive</label>
+                <input type="number" class="inputValue" name="maxPopulationValue" id="maxPopulationValue" min="1" max="8" value="3">
+                <input type="range" name="maxNeighbours" id="maxPopulation" min="1" max="8" value="3">
+            </div>
+            <div class="setting">
+                <label for="parentsRequired">Number of parents required for life</label>
+                <input type="number" class="inputValue" name="parentsRequiredValue" id="parentsRequiredValue" min="1" max="8" value="3">
+                <input type="range" name="parentsRequired" id="parentsRequired" min="1" max="8" value="3">
+            </div>
+
+            <div class="buttons">
+                <button id="startGame">Start Game</button>
+                <button id="runGeneration">Run A Generation</button>
+                <button id="savePattern">Save Pattern</button>
+                <button id="restorePattern">Restore Pattern</button>
+                <button id="clearGrid">Clear Grid</button>
+            </div>
+
+            <h2>Game Settings</h2>
+            <div class="setting">
+                <label for="gridWidth">Grid width</label>
+                <input type="number" name="gridWidth" id="gridWidth" min="1" value="30">
+            </div>
+            <div class="setting">
+                <label for="gridHeight">Grid height</label>
+                <input type="number" name="gridHeight" id="gridHeight" min="1" value="25">
+            </div>
+            <div class="setting">
+                <label for="useGrid">Use grid</label>
+                <input type="checkbox" name="useGrid" id="useGrid" checked>
+            </div>
+            <div class="setting">
+                <label for="setPaintingMode">Set Painting Mode</label>
+                <input type="checkbox" name="setPaintingMode" id="setPaintingMode" false>
+            </div>
+            <div class="setting">
+                <label for="gridHeight">Generation Interval In seconds</label>
+                <input type="number" name="generationInterval" id="generationInterval" step="0.01" value="0.10">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../game_of_life/game_of_life.js"></script>
+    <script src="./public/scripts/main.js"></script>
+</body>
+</html>
